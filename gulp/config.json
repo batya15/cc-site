@@ -1,0 +1,40 @@
+{
+  "path": {
+    "src": "src/static",
+    "build": "build/static",
+    "release": "release/static",
+    "temp": "temp",
+    "jsHint": ["src/static/**/*.js", "!**/bower_components/**", "!**/vendor/**", "!**/qunit.js"],
+    "bower_components": "src/static/bower_components",
+    "vendor_js": "src/static/vendor",
+    "scssFiles": ["src/static/**/*.{scss,sass}", "!**/bower_components/**"],
+    "jadeHtmlFiles": ["src/static/**/*.html.jade", "!**/bower_components/**"],
+    "jadeFiles": ["src/static/**/*.jade", "!**/bower_components/**", "!**/*.html.jade"],
+    "node_modules": "src/nodejs/node_modules"
+  },
+  "bower": "src/static/bower.json",
+  "npm": "src/nodejs/package.json",
+  "staticFiles": [
+    "src/static/**/*.{css,scss,sass}",
+    "src/static/**/*.js",
+    "src/static/**/*.html",
+    "src/static/**/*.svg",
+    "src/static/**/*.gif",
+    "src/static/**/*.{jpg,jpeg}",
+    "src/static/**/*.{ttf,woff,eot}*",
+    "src/static/**/*.png",
+    "!**/bower_components/**"
+  ],
+
+  "staticRelease": [
+    "build/static/**/*.svg",
+    "build/static/**/*.gif",
+    "build/static/**/*.json",
+    "build/static/**/*.{jpg,jpeg}",
+    "build/static/**/*.{ttf,woff,eot}*",
+    "build/static/**/*.png",
+    "!**/test/**"
+  ],
+
+  "gzipFiles": "**/*.{js,html,svg,css,ttf,woff,eot,json}*"
+}

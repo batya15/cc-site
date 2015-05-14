@@ -1,0 +1,11 @@
+doctype html
+html
+    head
+        title= title
+        script(data-main="main" src="/vendor/js/require.js")
+        script(src="/require-config.js")
+        link(rel='stylesheet', href='/vendor/css/normalize.css')
+        link(rel='stylesheet', href='/vendor/css/bootstrap.css')
+        link(rel='stylesheet', href='/styles/main.css')
+    body
+        block content

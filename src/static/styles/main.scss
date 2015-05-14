@@ -1,0 +1,180 @@
+html{
+  margin: 0;
+  padding: 0;
+}
+
+.clr {
+  clear: both;
+}
+
+body {
+  background: #eeeeee;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+
+  .main {
+    width: 960px;
+    margin: 0 auto;
+    height: 500px;
+  }
+
+  .wrapHeader {
+    height: 114px;
+  }
+
+  .header {
+    width: 960px;
+    position: fixed;
+    background: #eeeeee;
+
+    .top {
+      height: 82px;
+      overflow: hidden;
+      transition: height 0.2s;
+
+      & > div {
+        height: 100%;
+      }
+
+      h3 {
+        font-size: 18px;
+        margin: 0;
+      }
+
+      .logo {
+        display: inline-block;
+        height: 100%;
+        width: 124px;
+        background: url('/img/logo_main.png') center no-repeat transparent;
+      }
+    }
+
+    .mainMenu {
+      height: 32px;
+      background-color: #27292c;
+      color: #fff;
+      line-height: 32px;
+      margin: 0;
+      list-style: none;
+      user-select: none;
+      padding: 0;
+      font-family: Arial,sans-serif;
+      font-size: 14px;
+      transition: height 0.2s, line-height 0.2s;
+
+      li {
+        float: left;
+        padding: 0 8px;
+        cursor: pointer;
+
+        &:hover {
+          background: #7a93b7;
+        }
+
+      }
+
+    }
+
+  }
+
+  .scroll {
+    .mainMenu {
+      height: 22px;
+      line-height: 22px;
+    }
+
+    .top {
+      height: 30px;
+    }
+  }
+
+  .subMenu {
+    background: #fff;
+    height: 57px;
+    margin: 6px 0;
+    font-size: 12px;
+    text-align: center;
+    display: table;
+    width: 100%;
+    user-select: none;
+
+    .item {
+      display: table-cell;
+      vertical-align: middle;
+      width: 137px;
+      padding-left: 40px;
+      cursor: pointer;
+    }
+  }
+
+  .slider {
+    height: 366px;
+    margin: 6px 0;
+    background: url("/img/sliderdemo.png") center no-repeat #fff;
+  }
+
+  .trigger {
+    background-color: #fff;
+    height: 110px;
+    margin: 6px 0;
+  }
+
+  .advBlock {
+    background-color: #fff;
+    height: 325px;
+    margin: 6px 0;
+  }
+
+  .popProduction {
+    background-color: #fff;
+    height: 250px;
+    margin: 6px 0;
+  }
+
+  .advZamer {
+    height: 266px;
+    margin: 6px 0;
+    background: url("/img/demoMontaj.png") right bottom no-repeat #fff;
+  }
+
+  .reviews {
+    height: 370px;
+    margin: 6px 0;
+    background: #fff;
+  }
+
+  .advHelp {
+    height: 690px;
+    margin: 6px 0;
+    background: #fff;
+  }
+
+  .photosSlider {
+    height: 210px;
+    margin: 6px 0;
+    background: #fff;
+  }
+
+  .footerMenu {
+    height: 50px;
+    margin: 6px 0;
+    background: #fff;
+  }
+
+  .partners {
+    height: 90px;
+    margin: 6px 0;
+    background: #fff;
+  }
+
+  .social {
+    height: 50px;
+    margin: 6px 0;
+    background: #fff;
+  }
+
+  .footer {
+    height: 100px;
+  }
+
+}
