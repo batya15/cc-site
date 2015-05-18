@@ -1,0 +1,12 @@
+{
+  "route": "/catalog.html",
+  "view": "main",
+  "structure": {
+    "main": {
+      "views": {
+        "menu": "",
+        "subMenu": ""
+      }
+    }
+  }
+}

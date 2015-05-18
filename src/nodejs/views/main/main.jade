@@ -1,0 +1,36 @@
+doctype html
+html
+    head
+        title СС
+        script(data-main="main" src="/vendor/js/require.js")
+        script(src="/require-config.js")
+        link(rel='stylesheet', href='/vendor/css/normalize.css')
+        link(rel='stylesheet', href='/vendor/css/bootstrap.css')
+        link(rel='stylesheet', href='/styles/main.css')
+    body
+        .main
+            .wrapHeader
+                .header
+                    .top.row
+                        .col-xs-2
+                            a.logo(href='#')
+                        .col-xs-3
+                            h3 КОНТОЛЬ ХОЛОДА
+                            p весь спектр услуг систем кондиционирования
+                        .col-xs-3 (495) 979-23-05
+                        .col-xs-2 Закажи звонок
+                        .col-xs-2 Корзина
+                    != menu
+            != subMenu
+            .slider
+            .trigger Тут тригеры
+            .advBlock Тут слайдер
+            .popProduction Популярные товары
+            .advZamer Бесдланый вызов замерщика
+            .reviews Отзывы
+            .advHelp Плючы и минусы
+            .photosSlider Наши работы
+            .footerMenu О компании | Рейнитг | Статьи | Контакты
+            .partners Наши партнеры
+            .social Контроль холода в социальных сетях
+            .footer

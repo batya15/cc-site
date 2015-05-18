@@ -2,16 +2,16 @@
 
 var alias = {
     "home.html": "/",
-    "lg.html": "/price/?brand=lg",
+    "lg.html": "/catalog.html",
     "samsung.html": "/price/?brand=samsung"
 };
 
 module.exports = function () {
     return function(req, res, next) {
-        if (req.url == '/home.html') {
-            req.url = '/?sdsdfg=2';
+        if (req.url == '/lg.html') {
+            req.url = '/catalog.html?brands=lg';
             req.query = {
-                sdsdfg: 'batya'
+                brands: 'LG'
             }
         }
         next();

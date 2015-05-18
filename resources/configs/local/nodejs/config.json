@@ -1,0 +1,22 @@
+{
+  "name": "local version",
+  "db" : {
+    "db_host": "localhost",
+    "db_port": "3306",
+    "db_user": "root",
+    "db_pass": "",
+    "db_name": "cc"
+  },
+  "salt": "secret",
+  "mailer" : {
+    "loginGmail": "devel.cc@gmail.com",
+    "passwordGmail" : "vg6llxeK41IiDVH2"
+  },
+  "contentPath": "d:\\content\\",
+  "contentUrl": "/content/",
+  "blocked": {
+    "time": 1200000,
+    "attempt": 10
+  },
+  "sidTime": 172800000
+}
