@@ -5,7 +5,12 @@
     "main": {
       "views": {
         "menu": "",
-        "subMenu": ""
+        "subMenu": "",
+        "triggers": "",
+        "menuType": "",
+        "footerMenu": "",
+        "socialButton": "",
+        "partners": ""
       }
     }
   }

@@ -1,3 +1,8 @@
 ul.mainMenu
     each item in menu
-        li= item.caption
+        li
+            a(href=item.url)= item.caption
+            if (item.submenu)
+                ul.popup
+                    each s in item.submenu
+                        li= s.caption

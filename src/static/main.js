@@ -2,13 +2,13 @@ define('main', ['jquery'], function($) {
   //  var app = new App();
   //  app.render();
 
-    $(window).scroll(function(e) {
+    $(window).scroll(function() {
         if ($(window).scrollTop() > 0) {
-            $('.header').addClass('scroll')
+            $('.header').addClass('scroll');
         } else {
-            $('.header').removeClass('scroll')
+            $('.header').removeClass('scroll');
         }
-        console.log($(window).scrollTop())
+        console.log($(window).scrollTop());
     });
 
 });
