@@ -10,7 +10,8 @@
     "scssFiles": ["src/static/**/*.{scss,sass}", "!**/bower_components/**"],
     "jadeHtmlFiles": ["src/static/**/*.html.jade", "!**/bower_components/**"],
     "jadeFiles": ["src/static/**/*.jade", "!**/bower_components/**", "!**/*.html.jade"],
-    "node_modules": "src/nodejs/node_modules"
+    "node_modules": "src/nodejs/node_modules",
+    "template": ["src/static/template/**/*.jade"]
   },
   "bower": "src/static/bower.json",
   "npm": "src/nodejs/package.json",

@@ -49,6 +49,12 @@ function copyStaticClientFiles() {
         .pipe(gulp.dest(config.path.build));
 }
 //Копирование nodejs файлов
+function copyTemplate() {
+    return gulp.src("src/static/template/**/*.jade", {base: 'src/static/template'})
+        .pipe(plumber())
+        .pipe(gulp.dest("src/nodejs/template"));
+}
+//Копирование nodejs файлов
 function copyNodejJs() {
     return gulp.src("src/nodejs/**/*", {base: 'src/nodejs'})
         .pipe(plumber())
@@ -171,6 +177,11 @@ function registerWatchers() {
             .pipe(gulp.dest(config.path.build))
             .on('end', done);
     });
+    watch(config.path.template, {verbose: true, name: 'template-copy'}, function (files, done) {
+        return files.pipe(plumber())
+            .pipe(gulp.dest('src/nodejs/template'))
+            .on('end', done);
+    });
     watch(config.path.jadeHtmlFiles, {verbose: true, name: 'jade-static-compile-files'}, compileStaticTemplates);
     watch(config.path.jadeFiles, {verbose: true, name: 'jade-compile-files'}, compileTemplates);
     watch(config.path.scssFiles, {verbose: true, name: 'style-compile-files'}, compileStyle);
@@ -245,7 +256,7 @@ function setBuild(cb) {
 }
 
 gulp.task('development', gulp.series('clean', installModulesBower, 'bower',
-    'jsHint', gulp.parallel(copyStaticClientFiles, compileStyle, compileStaticTemplates, compileTemplates)));
+    'jsHint', gulp.parallel(copyStaticClientFiles, copyTemplate, compileStyle, compileStaticTemplates, compileTemplates)));
 
 
 gulp.task('default', gulp.series('development', registerWatchers));

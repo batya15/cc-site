@@ -1,5 +1,6 @@
 "use strict";
-var async = require('util/async');
+var async = require('util/async'),
+    conf = require('util/config').get('evn');
 
 // view collection
 var views = require('models/views');
@@ -27,7 +28,8 @@ Page.prototype = {
         return function (req, cb) {
             async.parallelCallWithoutArguments(asyncArr, req, function (err, result) {
                 result._client = req;
-                result._evn = data;
+                result._evn = conf;
+                result._params = data;
                 view.render(result, cb);
             });
         }

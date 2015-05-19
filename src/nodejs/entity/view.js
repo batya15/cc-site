@@ -16,7 +16,7 @@ Module.prototype = {
             },
             self = this,
             loadJadeFile = function () {
-                var templateJade = fs.readFileSync('./views/' + self.jadeFile + '/' + self.jadeFile + '.jade', 'utf-8');
+                var templateJade = fs.readFileSync('template/' + self.jadeFile + '.jade', 'utf-8');
                 return jade.compile(templateJade, {});
             };
 

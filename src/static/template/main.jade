@@ -2,11 +2,15 @@ doctype html
 html
     head
         title СС
-        script(data-main="main" src="/vendor/js/require.js")
-        script(src="/require-config.js")
-        link(rel='stylesheet', href='/vendor/css/normalize.css')
-        link(rel='stylesheet', href='/vendor/css/bootstrap.css')
-        link(rel='stylesheet', href='/styles/main.css')
+        if (_evn == 'dev')
+            script(data-main="main" src="/vendor/js/require.js")
+            script(src="/require-config.js")
+            link(rel='stylesheet', href='/vendor/css/normalize.css')
+            link(rel='stylesheet', href='/vendor/css/bootstrap.css')
+            link(rel='stylesheet', href='/styles/main.css')
+        else
+            script(src="/main.js", async)
+            link(rel='stylesheet', href='/styles.css')
     body
         .main
             .wrapHeader

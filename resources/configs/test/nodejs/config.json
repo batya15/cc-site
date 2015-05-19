@@ -1,11 +1,13 @@
 {
   "name": "local version",
   "db" : {
-    "db_host": "localhost",
+    "db_host": "10.0.3.72",
     "db_port": "3306",
-    "db_user": "root",
-    "db_pass": "",
+    "db_user": "user",
+    "db_pass": "nLk314l66QiF",
     "db_name": "cc"
   },
-  "release": true
+  "admin_server": "10.0.3.96",
+  "admin_port": "3030",
+  "evn": "dev"
 }

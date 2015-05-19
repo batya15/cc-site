@@ -2,6 +2,7 @@
 
 var events = require('events'),
     io = require('socket.io-client'),
+    config = require('util/config'),
     log = require("util/logger")(module);
 
 var Updater = function () {
@@ -12,8 +13,8 @@ Updater.prototype = new events.EventEmitter();
 
 Updater.prototype.init = function (cb) {
         var self = this,
-            socket =io('http://admin.cc.loc', {
-                port: 3030
+            socket =io(config.get('admin_server'), {
+                port: config.get('admin_port')
             });
         socket.on('connect', function(){
             log.info('Connected admin app');
