@@ -8,5 +8,6 @@ module.exports = {
     menuType: require('views/menuType/menuType'),
     footerMenu: require('views/footerMenu/footerMenu'),
     socialButton: require('views/socialButton/socialButton'),
-    partners: require('views/partners/partners')
+    partners: require('views/partners/partners'),
+    footer: require('views/footer/footer')
 };
