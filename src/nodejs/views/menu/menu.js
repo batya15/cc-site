@@ -1,7 +1,7 @@
 "use strict";
 
 var Module = require('entity/view'),
-    service = require('services/menu');
+    service = require('models/menus');
 
 var Menu = function () {
     this.jadeFile = 'menu';

@@ -5,7 +5,8 @@ var async = require('util/async'),
 
 var Services = function() {
     this.services = {
-        menu: require('./menu')
+        menu: require('./menu'),
+        update: require('./updater')
     }
 };
 

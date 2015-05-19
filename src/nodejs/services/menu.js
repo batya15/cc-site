@@ -1,34 +1,46 @@
-"use strict";
+'use strict';
 
-var db = require('entity/db'),
-    log = require("util/logger")(module);
+var dao = require('dao/menus'),
+    log = require('util/logger')(module),
+    updater = require('services/updater'),
+    model = require('models/menus');
 
 var Menu = function () {
     this.menus = {};
+    updater.on('all', this._build.bind(this));
+    updater.on('menu', this._build.bind(this));
 };
 
 Menu.prototype = {
     init: function (cb) {
-        var self = this;
-        db.query('SELECT * FROM `menus` ORDER BY `cost` ASC', function (err, row) {
-            row.forEach(function (item) {
-                if (!self.menus.hasOwnProperty(item.menu)) {
-                    self.menus[item.menu] = []
-                }
-                if (item.submenu) {
-                    if (!self.menus.hasOwnProperty(item.submenu)) {
-                        self.menus[item.submenu] = []
-                    }
-                    item.submenu = self.menus[item.submenu];
-                }
-                self.menus[item.menu].push(item);
-            });
-            log.info('initialize');
-            cb(err);
+        this._build(function () {
+            log.info('menus initialize');
+            cb()
         });
     },
-    get: function (name) {
-        return this.menus[name];
+    _build: function (cb) {
+        var menus = {};
+        dao.get(function (err, row) {
+            if (!err && row) {
+                row.forEach(function (item) {
+                    if (!menus.hasOwnProperty(item.menu)) {
+                        menus[item.menu] = []
+                    }
+                    if (item.submenu) {
+                        if (!menus.hasOwnProperty(item.submenu)) {
+                            menus[item.submenu] = []
+                        }
+                        item.submenu = menus[item.submenu];
+                    }
+                    menus[item.menu].push(item);
+                });
+                model.set(menus);
+                log.info('build menus');
+            }
+            if (typeof cb === 'function') {
+                cb(err);
+            }
+        });
     }
 };
 
