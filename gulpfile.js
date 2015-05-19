@@ -209,7 +209,7 @@ function gzipTask() {
 }
 //Копирование файлов в релиз
 function copyStaticFileRelease() {
-    return gulp.src(config.staticRelease, {base: 'build'})
+    return gulp.src(config.staticRelease)
         .pipe(gulp.dest(config.path.release));
 }
 //Минимизация JS
