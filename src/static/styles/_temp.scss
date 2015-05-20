@@ -1,0 +1,364 @@
+@import "variables";
+
+.wrapHeader {
+  height: 114px;
+}
+
+.header {
+  width: $widthMain;
+  z-index: 10;
+  position: relative;
+  background: #eeeeee;
+
+  &:before,
+  &:after {
+    background: #eee;
+    height: 100%;
+    width: 50px;
+    position: absolute;
+    top: 0;
+    content: "";
+  }
+
+  &:before {
+    right: -50px;
+  }
+  &:after {
+    left: -50px;
+  }
+
+  .top {
+    height: 82px;
+    overflow: hidden;
+    transition: height 0.2s;
+
+    & > div {
+      height: 100%;
+    }
+
+    h3 {
+      font-size: 18px;
+      margin: 0;
+    }
+
+    .logo {
+      display: inline-block;
+      height: 100%;
+      width: 124px;
+      background: url('/img/logo_main.png') center no-repeat transparent;
+    }
+  }
+
+  .mainMenu {
+    height: 32px;
+    background-color: #27292c;
+    color: #fff;
+    line-height: 32px;
+    margin: 0;
+    list-style: none;
+    user-select: none;
+    padding: 0;
+    font-size: 14px;
+    transition: height 0.2s, line-height 0.2s;
+
+    li {
+      float: left;
+      padding: 0 8px;
+      cursor: pointer;
+      position: relative;
+
+      &:hover {
+        background: #7a93b7;
+      }
+
+      a {
+        color: white;
+
+        &:hover {
+          text-decoration: none;
+        }
+      }
+
+      .popup {
+        position: absolute;
+        left: 0;
+        background: white;
+        color: black;
+        display: none;
+
+        a {
+          color: black;
+        }
+      }
+
+    }
+
+  }
+
+}
+
+.scroll {
+  .mainMenu {
+    height: 22px;
+    line-height: 22px;
+  }
+
+  .top {
+    height: 30px;
+  }
+}
+
+.v-triggers {
+  background-color: #fff;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+  margin: 6px 0;
+  padding: 6px;
+  text-align: left;
+  display: table;
+  width: 100%;
+  padding-bottom: 15px;
+
+  .trigger {
+    padding-left: 58px;
+    display: table-cell;
+    padding-top: 16px;
+    width: 33.3%;
+    padding-right: 6px;
+    margin-bottom: 5px;
+    background: url('/img/ok.png') 5px 14px no-repeat transparent;
+
+    h4 {
+      margin: 0;
+      font-size: 15px;
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+
+  }
+
+}
+
+.v-menuType {
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+  background-color: #fff;
+  margin: 6px 0;
+  padding: 6px;
+  text-align: left;
+  display: table;
+  width: 100%;
+  padding-bottom: 15px;
+
+  .item {
+    height: 305px;
+    display: table-cell;
+    width: 33.3%;
+    text-align: center;
+    font-size: 18px;
+    padding: 11px 25px;
+    line-height: 20px;
+    color: black;
+    opacity: 0.85;
+    transition: opacity 0.3s;
+    background: no-repeat center bottom transparent;
+
+    &:hover {
+      opacity: 1;
+      color: #ff850b;
+      text-decoration: none;
+    }
+  }
+
+}
+
+.subMenu {
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+  background: #fff;
+  height: 57px;
+  margin: 6px 0;
+  font-size: 12px;
+  text-align: left;
+  display: table;
+  width: 100%;
+  user-select: none;
+
+  a.item {
+    color: black;
+    display: table-cell;
+    vertical-align: middle;
+    width: 137px;
+    padding-left: 40px;
+    cursor: pointer;
+    background: left 5px center no-repeat transparent;
+    transition: background-position 0.1s;
+  }
+}
+
+.slider {
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+  height: 366px;
+  margin: 6px 0;
+  background: url("/img/sliderdemo.png") center no-repeat #fff;
+}
+
+.advBlock {
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+  background-color: #fff;
+  height: 325px;
+  margin: 6px 0;
+}
+
+.popProduction {
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+  background-color: #fff;
+  height: 250px;
+  margin: 6px 0;
+}
+
+.advZamer {
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+  height: 266px;
+  margin: 6px 0;
+  background: url("/img/demoMontaj.png") right bottom no-repeat #fff;
+}
+
+.reviews {
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+  height: 370px;
+  margin: 6px 0;
+  background: #fff;
+}
+
+.advHelp {
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+  height: 690px;
+  margin: 6px 0;
+  background: #fff;
+}
+
+.photosSlider {
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+  height: 210px;
+  margin: 6px 0;
+  background: #fff;
+}
+
+.v-fooretMenu {
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+  height: 50px;
+  margin: 6px 0;
+  background: #fff;
+  line-height: 50px;
+  font-size: 12px;
+
+  .item {
+    color: #849dc3;
+    margin-left: 10px;
+  }
+
+}
+
+.v-partners {
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+  height: 90px;
+  margin: 6px 0;
+  background: #fff;
+  padding: 6px 17px;
+  text-align: center;
+
+  h5 {
+    text-align: left;
+    font-weight: bold;
+  }
+
+  .item {
+    margin-right: 31px;
+    vertical-align: middle;
+  }
+
+  & :last-child {
+    margin-right: 0;
+  }
+
+}
+
+.v-socialButton {
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+  height: 50px;
+  line-height: 50px;
+  margin: 6px 0;
+  background: #fff;
+  padding: 0 18px;
+  font-size: 12px;
+
+  .item {
+    height: 30px;
+    width: 30px;
+    background: 0 0 no-repeat transparent;
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 7px;
+    opacity: 0.80;
+    transition: opacity 0.2s;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+
+  .share {
+    float: right;
+    margin-right: 10px;
+
+    & > div {
+      margin-top: -7px;
+    }
+  }
+
+}
+
+.footerMargin {
+  height: 48px;
+}
+
+.v-footer {
+  box-shadow: inset 0 1px 0 #e5e5e5, inset 0 2px 0 #fff;
+  height: 29px;
+  line-height: 29px;
+  position: fixed;
+  background: #fafafa;
+  left: 0;
+  right: 0;
+  font-size: 12px;
+  font-weight: bold;
+  bottom: 0;
+
+  .inner {
+    width: 960px;
+    margin: 0 auto;
+    text-align: right;
+  }
+
+  .prizeButton {
+    float: left;
+    background-color: #879fc4;
+    color: white;
+    width: 160px;
+    text-align: center;
+    font-size: 14px;
+    font-weight: normal;
+    cursor: pointer;
+    box-shadow: inset 0 1px 0 #879fc4, inset 0 2px 0 #aabcd5;
+
+  }
+
+  .item {
+    margin: 5px;
+    color: #849dc3;
+
+    &:hover {
+      color: #ff850b;
+      text-decoration: none;
+    }
+  }
+
+}
