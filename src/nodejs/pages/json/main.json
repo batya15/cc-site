@@ -36,7 +36,10 @@
       "socialButton": {
         "view": "list",
         "template": "socialButton",
-        "namespace": "socialbutton"
+        "namespace": "socialbutton",
+        "views" : {
+          "shareButton" : "html"
+        }
       },
       "partners": {
         "view": "list",

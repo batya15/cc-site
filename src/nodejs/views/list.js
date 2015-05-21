@@ -13,7 +13,8 @@ var List = function (name) {
 List.prototype = new View();
 
 List.prototype.comparator = function (data, cb) {
-    cb(null, {list: service.get(data._params.namespace)});
+    data.list = service.get(data._params.namespace);
+    cb(null, data);
 };
 
 module.exports = new Html(List, templates);
