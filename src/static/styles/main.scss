@@ -1,7 +1,5 @@
 @import "variables";
 @import "atomic";
-@import "v-main";
-@import "temp";
 @import url(http://fonts.googleapis.com/css?family=Roboto:400,300,700&subset=cyrillic,latin);
 
 html {
@@ -14,3 +12,6 @@ body {
   font-family: 'Roboto', sans-serif;
   font-size: 14px;
 }
+
+@import "v-main";
+@import "temp";

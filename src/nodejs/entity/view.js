@@ -4,12 +4,14 @@ var jade = require('jade'),
     fs = require('fs'),
     config = require('util/config').get('evn');
 
-var Module = function () {
-
+var View = function (jadeFile) {
+    if (jadeFile) {
+        this.jadeFile = jadeFile;
+    }
 };
 
-Module.prototype = {
-    constructor: Module,
+View.prototype = {
+    constructor: View,
     _template: function () {
         var template = function () {
                 return '<div>Standart Function template in Module</div>';
@@ -50,4 +52,4 @@ Module.prototype = {
     }
 };
 
-module.exports = Module;
+module.exports = View;

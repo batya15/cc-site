@@ -1,12 +1,15 @@
 {
   "route": "/catalog.html",
-  "view": "main",
   "structure": {
-    "main": {
-      "views": {
-        "menu": "",
-        "subMenu": ""
+    "view": "html",
+    "template": "main",
+    "views": {
+      "menu": {
+        "view": "list",
+        "template": "menu",
+        "namespace": "main"
       }
     }
   }
 }
+

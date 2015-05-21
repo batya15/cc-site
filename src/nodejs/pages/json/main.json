@@ -1,17 +1,52 @@
 {
   "route": "/",
-  "view": "main",
   "structure": {
-    "main": {
-      "views": {
-        "menu": "",
-        "subMenu": "",
-        "triggers": "",
-        "menuType": "",
-        "footerMenu": "",
-        "socialButton": "",
-        "partners": "",
-        "footer": ""
+    "view": "html",
+    "template": "main",
+    "views": {
+      "menu": {
+        "view": "list",
+        "template": "menu",
+        "namespace": "main"
+      },
+      "subMenu": {
+        "view": "list",
+        "template": "subMenu",
+        "namespace": "submenu"
+      },
+      "banner" : {
+        "view": "html",
+        "template": "banner"
+      },
+      "triggers": {
+        "view": "list",
+        "template": "triggers",
+        "namespace": "triggers"
+      },
+      "menuType": {
+        "view": "list",
+        "template": "menuType",
+        "namespace": "menuType"
+      },
+      "footerMenu": {
+        "view": "list",
+        "template": "footerMenu",
+        "namespace": "footermenu"
+      },
+      "socialButton": {
+        "view": "list",
+        "template": "socialButton",
+        "namespace": "socialbutton"
+      },
+      "partners": {
+        "view": "list",
+        "template": "partners",
+        "namespace": "partners"
+      },
+      "footer": {
+        "view": "list",
+        "template": "footer",
+        "namespace": "footer"
       }
     }
   }

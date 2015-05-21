@@ -1,6 +1,5 @@
 .v-socialButton
     .share
-        != share
     span Контроль Холода в социальных сетях:
-    each item in menu
+    each item in list
         a.item(href=item.url, title= item.title, target="_blank", style="background-image: url(" + item.image + ")")
