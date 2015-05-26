@@ -1,6 +1,7 @@
 @import "variables";
+@import "sprite";
 
-.mainMenu {
+.v-mainMenu {
   height: 32px;
   background-color: #27292c;
   color: #fff;
@@ -38,8 +39,6 @@
   .yellow > a {
       color: #ffcc00;
   }
-
-
 
   .hover {
 

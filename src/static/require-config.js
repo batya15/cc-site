@@ -20,12 +20,6 @@ require.config({
                 'vendor/js/jquery'
             ],
             exports: '$'
-        },
-        'vendor/js/bootstrap': {
-            deps: [
-                'vendor/js/jquery'
-            ],
-            exports: '$'
         }
     },
     'map': {

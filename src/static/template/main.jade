@@ -7,7 +7,7 @@ html
         meta(name="keywords", content="")
         if (_evn == 'dev')
             link(rel='stylesheet', href='/vendor/css/normalize.css')
-            link(rel='stylesheet', href='/vendor/css/bootstrap.css')
+            link(rel='stylesheet', href='/styles/bootstrap.css')
             link(rel='stylesheet', href='/styles/main.css')
         else
             link(rel='stylesheet', href='/styles.css')
@@ -27,7 +27,6 @@ html
                     != menu
             != subMenu
             .slider
-            != triggers
             != menuType
             .popProduction Популярные товары
             .advZamer Бесдланый вызов замерщика
@@ -42,9 +41,5 @@ html
 if (_evn == 'dev')
     script(data-main="main", src="/vendor/js/require.js")
     script(src="/require-config.js")
-    link(rel='stylesheet', href='/vendor/css/normalize.css')
-    link(rel='stylesheet', href='/vendor/css/bootstrap.css')
-    link(rel='stylesheet', href='/styles/main.css')
 else
     script(data-main="main", src="/main.js", async)
-    link(rel='stylesheet', href='/styles.css')

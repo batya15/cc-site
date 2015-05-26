@@ -9,3 +9,5 @@ src/nodejs/node_modules
 src/nodejs/config.json
 src/nodejs/npm-debug.log
 src/nodejs/template
+src/static/styles/_spriteVariables.scss
+src/static/img/sprite.png

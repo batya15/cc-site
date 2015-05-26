@@ -1,0 +1,51 @@
+@import "commons";
+@import "sprite";
+
+.v-socialButton {
+  @extend .commonsBox;
+  height: 50px;
+  line-height: 50px;
+  padding: 0 18px;
+
+  .item {
+    background-image: url("/img/sprite.png");
+    @include sprite-width($icon-soc-vk);
+    @include sprite-height($icon-soc-vk);
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 7px;
+    opacity: 0.80;
+    transition: opacity 0.2s;
+
+    &:hover {
+      opacity: 1;
+    }
+
+    &.vk {
+      @include sprite-position($icon-soc-vk)
+    }
+    &.fb {
+      @include sprite-position($icon-soc-fb)
+    }
+    &.instagram {
+      @include sprite-position($icon-soc-instagram)
+    }
+    &.ok {
+      @include sprite-position($icon-soc-ok)
+    }
+    &.twitter {
+      @include sprite-position($icon-soc-twitter)
+    }
+
+  }
+
+  .share {
+    float: right;
+    margin-right: 10px;
+
+    & > div {
+      margin-top: -7px;
+    }
+  }
+
+}

@@ -24,7 +24,8 @@
     "src/static/**/*.{jpg,jpeg}",
     "src/static/**/*.{ttf,woff,eot}*",
     "src/static/**/*.png",
-    "!**/bower_components/**"
+    "!**/bower_components/**",
+    "!src/static/img/sprites/**"
   ],
 
   "staticRelease": [

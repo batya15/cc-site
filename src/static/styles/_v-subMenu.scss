@@ -1,0 +1,55 @@
+@import "commons";
+@import "sprite";
+
+.v-subMenu {
+  @extend .commonsBox;
+  height: 57px;
+  text-align: left;
+  display: table;
+  width: 100%;
+  user-select: none;
+
+  a.item {
+    color: black;
+    display: table-cell;
+    vertical-align: middle;
+    width: 14.28571%;
+    padding-left: 37px;
+    cursor: pointer;
+    position: relative;
+
+    &:before {
+      content: "";
+      height: 25px;
+      width: 25px;
+      position: absolute;
+      top: 50%;
+      margin-top: -14px;
+      left: 6px;
+      background-image: url("/img/sprite.png");
+    }
+
+    &.setting:before {
+      @include sprite-position($icon-setting)
+    }
+    &.tools:before {
+      @include sprite-position($icon-tools)
+    }
+    &.box:before {
+      @include sprite-position($icon-box)
+    }
+    &.ruler:before {
+      @include sprite-position($icon-ruler)
+    }
+    &.water:before {
+      @include sprite-position($icon-water)
+    }
+    &.update:before {
+      @include sprite-position($icon-update)
+    }
+    &.calc:before {
+      @include sprite-position($icon-calc)
+    }
+  }
+
+}

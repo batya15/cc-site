@@ -18,6 +18,8 @@ var minifyCSS = require('gulp-minify-css');
 var minifyHtml = require('gulp-minify-html');
 var gzip = require('gulp-gzip');
 var _ = require('underscore');
+var spritesmith = require('gulp.spritesmith');
+var imagemin = require('gulp-imagemin');
 var order = require("gulp-order");
 var shell = require('gulp-shell');
 var uglify = require('gulp-uglify');
@@ -46,6 +48,7 @@ function installModulesBower() {
 function copyStaticClientFiles() {
     return gulp.src(config.staticFiles, {base: 'src/static'})
         .pipe(plumber())
+        .pipe(imagemin())
         .pipe(gulp.dest(config.path.build));
 }
 //Копирование nodejs файлов
@@ -60,6 +63,25 @@ function copyNodejJs() {
         .pipe(plumber())
         .pipe(gulp.dest("release/nodejs"));
 }
+//создание спрайт файлов
+function generateSprite() {
+
+    var spriteData = gulp.src(config.path.src + '/img/sprites/**/*.png')
+        .pipe(spritesmith({
+            algorithm: 'binary-tree',
+            imgName: 'sprite.png',
+            cssName: '_spriteVariables.scss',
+            cssFormat: 'scss',
+            cssOpts: {functions: false}
+        }));
+
+    spriteData.img
+        .pipe(imagemin())
+        .pipe(gulp.dest(config.path.src + '/img'));
+    spriteData.css.pipe(gulp.dest(config.path.src + '/styles'));
+    return spriteData;
+}
+
 //Компиляция стилей SCSS
 function compileStyle() {
     return gulp.src(config.path.scssFiles)
@@ -231,7 +253,6 @@ function jsMin() {
 }
 
 
-
 function concatRjs() {
     return gulp.src('temp/main.js', {baseUrl: 'temp'})
         .pipe(shell([ 'cd temp &&' +
@@ -258,9 +279,8 @@ function setBuild(cb) {
     return cb();
 }
 
-gulp.task('development', gulp.series('clean', installModulesBower, 'bower',
+gulp.task('development', gulp.series('clean', installModulesBower, 'bower', generateSprite,
     'jsHint', gulp.parallel(copyStaticClientFiles, copyTemplate, compileStyle, compileStaticTemplates, compileTemplates)));
-
 
 gulp.task('default', gulp.series('development', registerWatchers));
 gulp.task('release', gulp.series('cleanHard', setBuild, 'development', installModulesNPM,
