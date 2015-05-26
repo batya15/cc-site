@@ -1,0 +1,10 @@
+ul.mainMenu(data-id='mainMenu')
+    each item in list
+        if (_client.url != item.hideUrl)
+            li(data-id='mainItem', class= item.cssClass)
+                a(href=item.url, title=item.description)= item.caption
+                if (item.submenu)
+                    ul.subMenu
+                        each subItem in item.submenu
+                            li
+                                a(href=subItem.url, title=subItem.description)= subItem.caption

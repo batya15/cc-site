@@ -1,14 +1,14 @@
-define('main', ['jquery'], function($) {
-  //  var app = new App();
-  //  app.render();
+define('main', ['jquery', 'views/mainMenu'], function($, MainMenu) {
 
-    /*$(window).scroll(function() {
-        if ($(window).scrollTop() > 0) {
-            $('.header').addClass('scroll');
-        } else {
-            $('.header').removeClass('scroll');
-        }
-        console.log($(window).scrollTop());
-    });*/
+
+    if (document.readyState === 'complete') {
+        initialize();
+    } else {
+        document.onready = initialize();
+    }
+
+    function initialize() {
+     var mainMenu = new MainMenu({el: $('[data-id=mainMenu]')});
+    }
 
 });

@@ -6,7 +6,7 @@
     "views": {
       "menu": {
         "view": "list",
-        "template": "menu",
+        "template": "mainMenu",
         "namespace": "main"
       }
     }

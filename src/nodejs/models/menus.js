@@ -1,7 +1,7 @@
 "use strict";
 
 var Menus = function () {
-    this.attributes = {}
+    this.attributes = {};
 };
 
 Menus.prototype = {

@@ -1,0 +1,85 @@
+@import "variables";
+
+.mainMenu {
+  height: 32px;
+  background-color: #27292c;
+  color: #fff;
+  line-height: 32px;
+  margin: 0;
+  list-style: none;
+  user-select: none;
+  padding: 0;
+  font-size: 14px;
+  transition: height 0.2s, line-height 0.2s;
+
+  > li {
+    float: left;
+    cursor: pointer;
+    position: relative;
+
+    > a {
+      color: white;
+      display: inline-block;
+      height: 100%;
+      width: 100%;
+      padding: 0 8px;
+
+      &:hover {
+        text-decoration: none;
+        color: white;
+      }
+    }
+  }
+
+  .orange > a {
+      color: #ff850b;
+  }
+
+  .yellow > a {
+      color: #ffcc00;
+  }
+
+
+
+  .hover {
+
+    > a {
+      background: #7a93b7;
+    }
+
+    .subMenu {
+      display: table;
+    }
+  }
+
+  .subMenu {
+    display: none;
+    position: absolute;
+    left: 0;
+    background: white;
+    color: black;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+
+    li {
+      width: 150px;
+      display: block;
+    }
+
+    a {
+      padding: 3px 10px;
+      display: inline-block;
+      color: black;
+
+      &:hover {
+        text-decoration: none;
+        color: $hoverLinkColor;
+      }
+
+    }
+  }
+
+
+}

@@ -2,9 +2,9 @@
 
 var View = require('entity/view'),
     Html = require('entity/viewHtml'),
-    service = require('models/menus');
+    model = require('models/menus');
 
-var templates = ['footer', 'footerMenu', 'menu', 'menuType', 'partners', 'socialButton', 'subMenu', 'trigger'];
+var templates = ['footer', 'footerMenu', 'mainMenu', 'menuType', 'partners', 'socialButton', 'subMenu', 'trigger'];
 
 var List = function (name) {
     this.jadeFile = name;
@@ -13,7 +13,7 @@ var List = function (name) {
 List.prototype = new View();
 
 List.prototype.comparator = function (data, cb) {
-    data.list = service.get(data._params.namespace);
+    data.list = model.get(data._params.namespace);
     cb(null, data);
 };
 

@@ -49,51 +49,7 @@
     }
   }
 
-  .mainMenu {
-    height: 32px;
-    background-color: #27292c;
-    color: #fff;
-    line-height: 32px;
-    margin: 0;
-    list-style: none;
-    user-select: none;
-    padding: 0;
-    font-size: 14px;
-    transition: height 0.2s, line-height 0.2s;
-
-    li {
-      float: left;
-      padding: 0 8px;
-      cursor: pointer;
-      position: relative;
-
-      &:hover {
-        background: #7a93b7;
-      }
-
-      a {
-        color: white;
-
-        &:hover {
-          text-decoration: none;
-        }
-      }
-
-      .popup {
-        position: absolute;
-        left: 0;
-        background: white;
-        color: black;
-        display: none;
-
-        a {
-          color: black;
-        }
-      }
-
-    }
-
-  }
+  @import "mainMenu";
 
 }
 

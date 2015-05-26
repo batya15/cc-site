@@ -1,6 +1,5 @@
 @import "variables";
 @import "atomic";
-@import url(http://fonts.googleapis.com/css?family=Roboto:400,300,700&subset=cyrillic,latin);
 
 html {
   margin: 0;
@@ -9,7 +8,7 @@ html {
 
 body {
   background: $bgColor;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Arial', sans-serif;
   font-size: 14px;
 }
 
