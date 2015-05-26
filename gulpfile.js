@@ -19,7 +19,7 @@ var minifyHtml = require('gulp-minify-html');
 var gzip = require('gulp-gzip');
 var _ = require('underscore');
 var spritesmith = require('gulp.spritesmith');
-var imagemin = require('gulp-imagemin');
+var imagemin = require('gulp-image-optimization');
 var order = require("gulp-order");
 var shell = require('gulp-shell');
 var uglify = require('gulp-uglify');
@@ -48,7 +48,11 @@ function installModulesBower() {
 function copyStaticClientFiles() {
     return gulp.src(config.staticFiles, {base: 'src/static'})
         .pipe(plumber())
-        .pipe(imagemin())
+        .pipe(imagemin({
+            optimizationLevel: 5,
+            progressive: true,
+            interlaced: true
+        }))
         .pipe(gulp.dest(config.path.build));
 }
 //Копирование nodejs файлов
@@ -76,7 +80,11 @@ function generateSprite() {
         }));
 
     spriteData.img
-        .pipe(imagemin())
+        .pipe(imagemin(({
+            optimizationLevel: 5,
+            progressive: true,
+            interlaced: true
+        })))
         .pipe(gulp.dest(config.path.src + '/img'));
     spriteData.css.pipe(gulp.dest(config.path.src + '/styles'));
     return spriteData;

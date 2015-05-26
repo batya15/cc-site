@@ -51,6 +51,6 @@
     "gulp-shell": "~0.3.0",
     "gulp-order": "~1.1.1",
     "gulp-autoprefixer": "~2.1.0",
-    "gulp-imagemin": "~2.2.1"
+    "gulp-image-optimization": "~0.1.3"
   }
 }
