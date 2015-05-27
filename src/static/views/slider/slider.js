@@ -67,14 +67,14 @@ define(['backbone', './banner'], function(Backbone, Banner) {
             this.$('[data-ns = ' + m.id + ']')
                 .removeClass('bold')
                 .addClass(function () {
-                    return (m.get('active'))? 'bold': ''
+                    return (m.get('active'))? 'bold': '';
                 });
         },
         startTimer: function() {
             this.timer = setTimeout(function () {
                 this.collection.nextActive();
                 this.startTimer();
-            }.bind(this), 111116000);
+            }.bind(this), 6000);
         },
         stopTimer: function() {
             clearTimeout(this.timer);

@@ -8,7 +8,6 @@ define(['backbone', './banner.jade'], function(Backbone, template) {
         initialize: function() {
             this.listenTo(this.model, 'change:active', this.active);
             this.render();
-            console.log(this.model.attributes);
         },
         render: function() {
             this.$el.html(template(this.model.attributes));
@@ -18,9 +17,9 @@ define(['backbone', './banner.jade'], function(Backbone, template) {
                 this.$el.addClass('active').show();
             } else {
                 this.$el.removeClass('active');
-                setTimeout(function() {this.$el.hide()}.bind(this), 300);
+                setTimeout(function() {this.$el.hide();}.bind(this), 300);
             }
         }
-    })
+    });
 
 });
