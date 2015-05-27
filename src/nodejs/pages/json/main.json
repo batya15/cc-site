@@ -9,6 +9,11 @@
         "template": "mainMenu",
         "namespace": "main"
       },
+      "slider": {
+        "view": "list",
+        "template": "slider",
+        "namespace": "slider"
+      },
       "subMenu": {
         "view": "list",
         "template": "subMenu",

@@ -9,6 +9,9 @@ define(['backbone'], function(Backbone) {
             'mouseout [data-id=mainItem]': 'mouseOut'
         },
         initialize: function(data) {
+            if (!data.el.length) {
+                this.remove();
+            }
             this.setElement(data.el);
         },
         mouseOver: function(e) {

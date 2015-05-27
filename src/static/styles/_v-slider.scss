@@ -1,0 +1,115 @@
+@import "commons";
+
+.v-slider {
+  @extend .commonsBox;
+  height: 366px;
+  position: relative;
+  padding: 6px;
+  user-select: none;
+
+  .wrapper {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .v-bnr {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity 0.5s;
+
+    &.active {
+      opacity: 1
+    }
+
+    .img {
+      height: 100%;
+      width: 100%;
+      background-position: 0 0;
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+
+
+    .btn {
+      position: absolute;
+      display: inline-block;
+      padding: 12px 15px;
+      color: white;
+      background-color: rgba(44,44,44,0.5);
+      border-radius: 20px;
+
+      &:hover {
+        background-color: rgba(44,44,44,0.8);
+        text-decoration: none;
+      }
+      &.installation,
+      &.repair {
+        top: 201px;
+        left: 315px;
+      }
+
+      &.consultation{
+        top: 236px;
+        left: 731px;
+      }
+
+      &.sale {
+        top: 241px;
+        left: 702px;
+      }
+
+    }
+
+
+  }
+
+  .menu {
+    position: absolute;
+    left: 9px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    top: 83px;
+    width: 260px;
+    font-size: 16px;
+
+    &.sale,
+    &.consultation{
+      li {
+        border-bottom-color: white;
+
+        a {
+          color: white;
+        }
+      }
+    }
+
+    li {
+      padding: 6px 7px;
+      border-bottom: 1px solid #2c2c2c;
+
+      a {
+        opacity: 0.55;
+        color: black;
+        transition: opacity 0.3s;
+
+        &:hover {
+          opacity: 1;
+          text-decoration: none;
+        }
+
+        &.bold {
+          opacity: 1;
+        }
+
+      }
+    }
+  }
+
+}

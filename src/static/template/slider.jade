@@ -1,0 +1,6 @@
+.v-slider(data-slider='slider')
+    .wrapper.bnr
+    ul.menu
+        each item in list
+            li
+                a.item(href=item.url, data-url= item.url, title= item.description, data-ns=item.cssClass, data-img=item.image)= item.caption

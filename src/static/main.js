@@ -1,4 +1,5 @@
-define('main', ['jquery', 'views/mainMenu'], function($, MainMenu) {
+define('main', ['jquery', 'underscore', 'views/mainMenu', 'views/slider/slider'],
+    function($, _, MainMenu, Slider) {
 
 
     if (document.readyState === 'complete') {
@@ -9,6 +10,10 @@ define('main', ['jquery', 'views/mainMenu'], function($, MainMenu) {
 
     function initialize() {
      var mainMenu = new MainMenu({el: $('[data-id=mainMenu]')});
+        _.defer(function () {
+            var slider = new Slider({el: $('[data-slider=slider]')});
+        });
+
     }
 
 });
