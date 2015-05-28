@@ -1,0 +1,141 @@
+@import "sprite";
+
+.v-faq {
+  text-align: center;
+  padding: 20px;
+
+  h1 {
+    font-size: 24px;
+  }
+
+  .gray {
+    color: #bcbcbc;
+    margin-right: 7px;
+  }
+
+  .row {
+    margin-top: 30px;
+    text-align: left;
+  }
+
+  .icon {
+    height: 128px;
+    width: 128px;
+    border-radius: 50%;
+    background-color: #eeeeef;
+    margin: 0 auto 32px;
+    text-align: center;
+
+    &:before {
+      content: "";
+      display: inline-block
+    }
+  }
+
+  .item {
+    display: block;
+    padding-right: 24px;
+    margin-bottom: 15px;
+    font-size: 14px;
+  }
+
+  .plus {
+    .icon {
+      line-height: 164px;
+      &:before {
+        @include sprite($hand);
+      }
+    }
+
+    .item {
+
+      &:before {
+        content: "";
+        float: left;
+        @include sprite($checkbox);
+      }
+
+      .caption,
+      .desc {
+        margin-left: 25px;
+      }
+
+      .caption {
+        font-weight: bold;
+        text-transform: uppercase;
+      }
+
+    }
+
+  }
+
+  .error {
+    .item {
+      padding-right: 0;
+      padding-left: 24px;
+      position: relative;
+
+      &:before {
+        content: "";
+        position: absolute;
+        @include sprite($error);
+        top: 0;
+        left: 0;
+      }
+
+    }
+    .icon {
+      line-height: 186px;
+      &:before {
+        @include sprite($handMinus);
+      }
+    }
+  }
+
+  .question {
+    .item {
+      padding-right: 0;
+      padding-left: 24px;
+      position: relative;
+
+      &:before {
+        content: "";
+        position: absolute;
+        @include sprite($checkbox);
+        top: 0;
+        left: 0;
+      }
+    }
+
+    .ask {
+      border: 5px dashed #eee;
+      text-align: center;
+      padding: 10px;
+      margin: 20px 0;
+      .desc {
+        font-weight: bold;
+        font-size: 18px;
+      }
+
+      .btn {
+        margin: 10px;
+      }
+
+    }
+
+    .icon {
+      line-height: 170px;
+      &:before {
+        @include sprite($goal);
+      }
+    }
+  }
+
+  .title {
+    font-size: 18px;
+    min-height: 40px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+}
+

@@ -1,7 +1,4 @@
-@import "commons";
-
 .v-measurement {
-  @include commonsBox();
   height: 266px;
   background: url("/img/demoMontaj.png") right bottom no-repeat #fff;
   padding: 15px 20px;

@@ -1,8 +1,6 @@
-@import "commons";
 @import "sprite";
 
 .v-triggers {
-  @include commonsBox();
   padding: 6px 0 15px;
   text-align: left;
   display: table;

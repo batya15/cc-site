@@ -12,6 +12,11 @@ body {
   font-size: 14px;
 }
 
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+}
+
 @import "v-main";
 @import "v-header";
 @import "v-subMenu";
@@ -19,4 +24,5 @@ body {
 @import "v-triggers";
 @import "v-slider";
 @import "v-measurement";
+@import "v-faq";
 @import "temp";

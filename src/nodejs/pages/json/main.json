@@ -43,6 +43,11 @@
         "view": "html",
         "template": "measurement"
       },
+      "faq" : {
+        "view": "list",
+        "template": "faq",
+        "namespace": "faq"
+      },
       "slider": {
         "view": "list",
         "template": "slider",

@@ -1,0 +1,39 @@
+mixin plus(list)
+    each item in list
+        .item
+            .caption= item.caption
+            .desc= item.description
+
+mixin error(list)
+    each item in list
+        .item= item.caption
+
+mixin question(list)
+    each item in list
+        if (item.cssClass == 'ask')
+            .ask
+                .desc= item.description
+                .btn= item.caption
+        else
+            a.item(href=item.url, class=item.cssClass, title=item.desription)= item.caption
+
+.v-faq.commonBox
+    h1
+        span.gray КЛИМАТИЧЕСКАЯ КОМПАНИЯ
+        span КОНТРОЛЬ ХОЛОДА
+    .row
+        each item in list
+            .col-xs-4(class=item.cssClass)
+                .icon
+                h4.title= item.caption
+                case item.cssClass
+                    when 'plus'
+                        +plus(item.submenu)
+                    when 'error'
+                        +error(item.submenu)
+                    when 'question'
+                        +question(item.submenu)
+                    default
+                        each item in list
+                            .item= item.caption
+
