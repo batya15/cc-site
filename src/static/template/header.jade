@@ -1,14 +1,23 @@
-.wrapHeader
-    .header
-        .top.row
-            .col-xs-2
-                a.logo(href='#')
-            .col-xs-3
-                h3= nameCompany
-                p= slogan
-            .col-xs-3
-                .phone= phone
-                .openingTime= openingTimes
-            .col-xs-2 Закажи звонок
-            .col-xs-2 Корзина
-        != menu
+.v-header
+    header.top.row
+        .col-xs-2
+            a.logo(href='#')
+        .col-xs-3.companyName
+            h3= nameCompany
+            .slogan= slogan
+        .col-xs-3
+            .phone= phone
+            div нужна консультация
+                strong ЗВОНИ!
+            .openingTime= openingTimes
+        .col-xs-2.contact
+            .btn-call Закажите звонок
+            a.email(href='mailto:'+ email, target="_blank")= email
+        .col-xs-2.userBlock
+            .basket
+                .count 2
+                .inner
+                    .caption Корзина
+                    .value 13 852
+            a.login(href='#') Вход в кабинет
+    != menu

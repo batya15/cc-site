@@ -49,7 +49,7 @@ function copyStaticClientFiles() {
     return gulp.src(config.staticFiles, {base: 'src/static'})
         .pipe(plumber())
         .pipe(imagemin({
-            optimizationLevel: 5,
+            optimizationLevel: 4,
             progressive: true,
             interlaced: true
         }))
@@ -80,11 +80,6 @@ function generateSprite() {
         }));
 
     spriteData.img
-        .pipe(imagemin(({
-            optimizationLevel: 5,
-            progressive: true,
-            interlaced: true
-        })))
         .pipe(gulp.dest(config.path.src + '/img'));
     spriteData.css.pipe(gulp.dest(config.path.src + '/styles'));
     return spriteData;

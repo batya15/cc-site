@@ -16,7 +16,8 @@ var DaoSetting = function () {
         description: '',
         keywords: '',
         scripts: '',
-        metaTags: ''
+        metaTags: '',
+        email: ''
     };
 };
 

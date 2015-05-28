@@ -1,0 +1,168 @@
+@import "variables";
+@import "sprite";
+
+.v-header {
+  width: $widthMain;
+  z-index: 10;
+  position: relative;
+  background: #eeeeee;
+  color: #27292c;
+
+  .top {
+    height: 82px;
+    overflow: hidden;
+    transition: height 0.2s;
+    font-size: 12px;
+
+    & > div {
+      height: 100%;
+      padding-top: 15px;
+    }
+
+    .companyName {
+      padding-left: 25px;
+
+      h3 {
+        font-size: 18px;
+        margin: 0;
+        font-weight: normal;
+        text-transform: uppercase;
+      }
+
+      .slogan {
+        margin-top: 2px;
+        line-height: 1.1em;
+      }
+    }
+
+    .logo {
+      display: inline-block;
+      margin-top: -9px;
+      height: 100%;
+      width: 124px;
+      background: url('/img/logo_main.png') center no-repeat transparent;
+    }
+
+    .phone {
+      font-size: 18px;
+      font-weight: normal;
+
+      &:before {
+        content: "";
+        display: inline-block;
+        @include sprite($phone);
+        vertical-align: middle;
+        margin-right: 7px;
+      }
+    }
+
+    strong {
+      margin-left: 3px;
+    }
+
+    .openingTime {
+      font-size: 10px;
+    }
+
+    .contact {
+      text-align: center;
+
+      .btn-call {
+        display: inline-block;
+        line-height: 27px;
+        background: #99aed0; /* Old browsers */
+        background: -moz-linear-gradient(top, #99aed0 0%, #879fc4 100%); /* FF3.6+ */
+        background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #99aed0), color-stop(100%, #879fc4)); /* Chrome,Safari4+ */
+        background: -o-linear-gradient(top, #99aed0 0%, #879fc4 100%); /* Opera 11.10+ */
+        background: -ms-linear-gradient(top, #99aed0 0%, #879fc4 100%); /* IE10+ */
+        background: linear-gradient(to bottom, #99aed0 0%, #879fc4 100%); /* W3C */
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#99aed0', endColorstr='#879fc4', GradientType=0); /* IE6-9 */
+        color: white;
+        padding: 0 17px;
+        cursor: pointer;
+        border-radius: 3px;
+        box-shadow: inset 0 -1px 0 #617ca1;
+        user-select: none;
+
+        &:hover {
+          background: #b2c4df; /* Old browsers */
+          background: -moz-linear-gradient(top, #b2c4df 0%, #879fc4 100%); /* FF3.6+ */
+          background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #b2c4df), color-stop(100%, #879fc4)); /* Chrome,Safari4+ */
+          background: -webkit-linear-gradient(top, #b2c4df 0%, #879fc4 100%); /* Chrome10+,Safari5.1+ */
+          background: -o-linear-gradient(top, #b2c4df 0%, #879fc4 100%); /* Opera 11.10+ */
+          background: -ms-linear-gradient(top, #b2c4df 0%, #879fc4 100%); /* IE10+ */
+          background: linear-gradient(to bottom, #b2c4df 0%, #879fc4 100%); /* W3C */
+          filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#b2c4df', endColorstr='#879fc4', GradientType=0); /* IE6-9 */
+        }
+
+        &:active {
+          box-shadow: inset 0 -1px 0 #617ca1, inset 0 5px 6px rgba(0, 0, 0, 0.24);
+        }
+      }
+      .email {
+        line-height: 40px;
+
+        &:before {
+          content: "";
+          display: inline-block;
+          margin-right: 3px;
+          @include sprite($mail);
+        }
+      }
+    }
+
+    .userBlock {
+      height: 35px;
+      position: relative;
+      text-align: center;
+
+      .count {
+        position: absolute;
+        border-radius: 7px;
+        background-color: #e90015;
+        color: white;
+        height: 15px;
+        min-width: 15px;
+        left: 41px;
+        top: 14px;
+      }
+
+      .basket {
+
+        &:before {
+          @include sprite($basket);
+          content: "";
+          float: left;
+          margin: 6px 0 0 8px;
+        }
+
+        .inner {
+          margin-left: 45px;
+          text-align: center;
+          line-height: 1.2em;
+
+          .caption {
+            font-weight: bold;
+            color: $colorText;
+          }
+
+          .value {
+            font-size: 14px;
+            color: #27292c;
+            &:after {
+              content: ' руб.';
+            }
+          }
+        }
+      }
+
+      .login {
+        line-height: 37px;
+      }
+    }
+
+  }
+
+  @import "mainMenu";
+
+}
