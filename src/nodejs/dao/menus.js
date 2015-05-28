@@ -9,7 +9,7 @@ var DaoMenus = function () {
 DaoMenus.prototype = {
     constructor: DaoMenus,
     get: function (cb) {
-        db.query('SELECT * FROM `menus` ORDER BY `cost` ASC', cb)
+        db.query('SELECT * FROM `site_menus` ORDER BY `cost` ASC', cb);
     }
 };
 

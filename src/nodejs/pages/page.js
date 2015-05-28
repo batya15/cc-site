@@ -38,7 +38,7 @@ Page.prototype = {
                 result._params = data;
                 view.render(result, cb);
             });
-        }
+        };
     }
 };
 

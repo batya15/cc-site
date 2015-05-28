@@ -6,7 +6,6 @@ var dao = require('dao/menus'),
     model = require('models/menus');
 
 var Menu = function () {
-    this.menus = {};
     updater.on('all', this._build.bind(this));
     updater.on('menu', this._build.bind(this));
 };
@@ -15,7 +14,7 @@ Menu.prototype = {
     init: function (cb) {
         this._build(function () {
             log.info('menus initialize');
-            cb()
+            cb.apply(this, arguments);
         });
     },
     _build: function (cb) {

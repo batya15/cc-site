@@ -4,10 +4,36 @@
     "view": "html",
     "template": "main",
     "views": {
-      "menu": {
-        "view": "list",
-        "template": "mainMenu",
-        "namespace": "main"
+      "metaTags": {
+        "view": "meta",
+        "template": "meta"
+      },
+      "header": {
+        "view": "html",
+        "template": "header",
+        "views": {
+          "menu": {
+            "view": "list",
+            "template": "mainMenu",
+            "namespace": "main"
+          },
+          "nameCompany": {
+            "view": "setting",
+            "name": "name"
+          },
+          "phone": {
+            "view": "setting",
+            "name": "phone"
+          },
+          "openingTimes": {
+            "view": "setting",
+            "name": "openingTimes"
+          },
+          "slogan": {
+            "view": "setting",
+            "name": "slogan"
+          }
+        }
       },
       "slider": {
         "view": "list",
@@ -39,7 +65,10 @@
         "template": "socialButton",
         "namespace": "socialbutton",
         "views" : {
-          "shareButton" : "html"
+          "shareButton" : {
+            "view": "setting",
+            "name": "yandexShare"
+          }
         }
       },
       "partners": {
@@ -51,6 +80,10 @@
         "view": "list",
         "template": "footer",
         "namespace": "footer"
+      },
+      "scripts": {
+        "view": "setting",
+        "name": ["googleAnalytics", "yandexMetrika", "scripts"]
       }
     }
   }

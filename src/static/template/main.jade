@@ -3,8 +3,7 @@ html
     head
         meta(charset="utf-8")
         title CC
-        meta(name="description", content="")
-        meta(name="keywords", content="")
+        !=metaTags
         if (_evn == 'dev')
             link(rel='stylesheet', href='/vendor/css/normalize.css')
             link(rel='stylesheet', href='/styles/bootstrap.css')
@@ -13,18 +12,7 @@ html
             link(rel='stylesheet', href='/styles.css')
     body
         .v-main
-            .wrapHeader
-                .header
-                    .top.row
-                        .col-xs-2
-                            a.logo(href='#')
-                        .col-xs-3
-                            h3 КОНТОЛЬ ХОЛОДА
-                            p весь спектр услуг систем кондиционирования
-                        .col-xs-3 (495) 979-23-05
-                        .col-xs-2 Закажи звонок
-                        .col-xs-2 Корзина
-                    != menu
+            !=header
             != subMenu
             != slider
             != triggers
@@ -39,8 +27,9 @@ html
             != socialButton
             .footerMargin
             != footer
-if (_evn == 'dev')
-    script(data-main="main", src="/vendor/js/require.js")
-    script(src="/require-config.js")
-else
-    script(data-main="main", src="/main.js", async)
+    if (_evn == 'dev')
+        script(data-main="main", src="/vendor/js/require.js")
+        script(src="/require-config.js")
+    else
+        script(data-main="main", src="/main.js", async)
+    != scripts

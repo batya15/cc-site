@@ -5,9 +5,10 @@ var async = require('util/async'),
 
 var Services = function() {
     this.services = {
+        setting: require('./setting'),
         menu: require('./menu'),
         update: require('./updater')
-    }
+    };
 };
 
 Services.prototype = {

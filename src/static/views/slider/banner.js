@@ -1,5 +1,5 @@
 "use strict";
-define(['backbone', './banner.jade'], function(Backbone, template) {
+define(['backbone', 'underscore','./banner.jade'], function(Backbone, _, template) {
 
     return Backbone.View.extend({
         attributes: {
@@ -14,7 +14,10 @@ define(['backbone', './banner.jade'], function(Backbone, template) {
         },
         active: function() {
             if (this.model.get('active')) {
-                this.$el.addClass('active').show();
+                this.$el.show();
+                _.defer(function () {
+                    this.$el.addClass('active');
+                }.bind(this));
             } else {
                 this.$el.removeClass('active');
                 setTimeout(function() {this.$el.hide();}.bind(this), 300);
