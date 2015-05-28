@@ -1,7 +1,7 @@
 @import "commons";
 
 .v-slider {
-  @extend .commonsBox;
+  @include commonsBox();
   height: 366px;
   position: relative;
   padding: 6px;

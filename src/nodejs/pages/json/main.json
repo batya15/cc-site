@@ -39,6 +39,10 @@
           }
         }
       },
+      "measurement": {
+        "view": "html",
+        "template": "measurement"
+      },
       "slider": {
         "view": "list",
         "template": "slider",

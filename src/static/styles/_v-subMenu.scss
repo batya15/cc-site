@@ -2,7 +2,7 @@
 @import "sprite";
 
 .v-subMenu {
-  @extend .commonsBox;
+  @include commonsBox();
   height: 57px;
   text-align: left;
   display: table;

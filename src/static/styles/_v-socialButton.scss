@@ -2,7 +2,7 @@
 @import "sprite";
 
 .v-socialButton {
-  @extend .commonsBox;
+  @include commonsBox();
   height: 50px;
   line-height: 50px;
   padding: 0 18px;
