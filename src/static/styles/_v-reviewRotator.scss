@@ -1,0 +1,146 @@
+@import "sprite";
+
+.v-reviewsRotator {
+  height: 368px;
+  background: #fff;
+
+  h2 {
+    font-size: 24px;
+    text-align: center;
+    padding: 13px;
+    text-transform: uppercase;
+
+    &:after,
+    &:before {
+      content: "-";
+      margin: 0 10px;
+    }
+
+  }
+
+  .reviewList {
+    height: 262px;
+    border-bottom: 1px solid #eeeeee;
+  }
+
+  .btn-gray {
+    float: right;
+    margin: 7px 13px;
+  }
+
+  .cnt {
+    height: 100%;
+    margin: 0 48px;
+    overflow: hidden;
+    position: relative;
+
+    & > .inner {
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      white-space: nowrap;
+    }
+
+    .review {
+      white-space: normal;
+      display: inline-block;
+      width: 288px;
+      height: 100%;
+      padding: 5px;
+
+      .text {
+        background-color: #eee;
+        margin: 10px 10px 22px;
+        height: 113px;
+        padding: 15px;
+        border-radius: 15px;
+        position: relative;
+
+        &:after {
+          content: "";
+          position: absolute;
+          bottom: -41px;
+          left: 13%;
+          width: 37px;
+          border: 22px solid transparent;
+          border-top: 20px solid #eee;
+        }
+      }
+
+      .name {
+        font-size: 18px;
+        font-weight: bold;
+        margin: 42px 0 0 112px;
+      }
+
+      .contacts {
+        font-size: 14px;
+        margin-left: 112px;
+      }
+
+      .avatar {
+        height: 84px;
+        width: 84px;
+        float: left;
+        background-color: #eeeeee;
+        margin: 5px;
+        border-radius: 50%;
+
+        &.woman {
+          @include sprite-position($woman);
+          @include sprite-image($woman);
+        }
+
+        &.man {
+          @include sprite-position($man);
+          @include sprite-image($man);
+        }
+
+      }
+
+    }
+
+  }
+
+  .nextBtn,
+  .prevBtn {
+    width: 48px;
+    height: 100%;
+    position: relative;
+    cursor: pointer;
+    opacity: 0.5;
+    transition: opacity 0.2s;
+
+    &:hover {
+      opacity: 1;
+    }
+
+    &:before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      margin-top: -27px;
+      margin-left: -14px;
+    }
+  }
+
+  .nextBtn {
+    float: right;
+
+    &:before {
+      @include sprite($right);
+    }
+
+  }
+
+  .prevBtn {
+    float: left;
+    &:before {
+      @include sprite($left);
+    }
+
+  }
+
+}
