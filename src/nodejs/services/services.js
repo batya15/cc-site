@@ -7,7 +7,8 @@ var Services = function() {
     this.services = {
         setting: require('./setting'),
         menu: require('./menu'),
-        update: require('./updater')
+        update: require('./updater'),
+        reviews: require('./reviews')
     };
 };
 

@@ -48,6 +48,7 @@
       width: 288px;
       height: 100%;
       padding: 5px;
+      vertical-align: top;
 
       .text {
         background-color: #eee;
@@ -86,6 +87,7 @@
         background-color: #eeeeee;
         margin: 5px;
         border-radius: 50%;
+        overflow: hidden;
 
         &.woman {
           @include sprite-position($woman);
@@ -95,6 +97,13 @@
         &.man {
           @include sprite-position($man);
           @include sprite-image($man);
+        }
+
+        .photo {
+          width: 100%;
+          height: 100%;
+          background: center no-repeat red;
+          background-size: cover;
         }
 
       }

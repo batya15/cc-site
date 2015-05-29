@@ -1,0 +1,16 @@
+.v-reviewsRotator.commonBox(data-review-rotator)
+    h2 Отзывы клиентов
+    .reviewList
+        .prevBtn
+        .nextBtn
+        .cnt
+            .inner
+                each item in list
+                    .review
+                        .text= item.text
+                        .avatar(class= item.sex)
+                            if (item.avatar)
+                                .photo(style="background-image: url('" + item.avatar + "')")
+                        .name= item.name
+                        .contacts= item.contact
+    a.btn-gray(href='/review.html') Читать все отзывы
