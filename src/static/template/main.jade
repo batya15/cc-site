@@ -8,6 +8,8 @@ html
             link(rel='stylesheet', href='/vendor/css/normalize.css')
             link(rel='stylesheet', href='/styles/bootstrap.css')
             link(rel='stylesheet', href='/styles/main.css')
+        else
+            link(rel='stylesheet', href='/styles.css')
     body
         !=header
         != subMenu
@@ -29,5 +31,4 @@ html
         script(src="/require-config.js")
     else
         script(data-main="main", src="/main.js", async)
-        link(rel='stylesheet', href='/styles.css')
     != scripts
