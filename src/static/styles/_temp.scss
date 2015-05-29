@@ -3,11 +3,11 @@
 .v-menuType {
   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
   background-color: #fff;
-  margin: 6px 0;
   padding: 6px;
   text-align: left;
   display: table;
-  width: 100%;
+  width: $widthMain;
+  margin: 6px auto;
   padding-bottom: 15px;
 
   .item {
@@ -36,27 +36,31 @@
   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
   background-color: #fff;
   height: 325px;
-  margin: 6px 0;
+  width: $widthMain;
+  margin: 6px auto;
 }
 
 .popProduction {
   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
   background-color: #fff;
   height: 250px;
-  margin: 6px 0;
+  width: $widthMain;
+  margin: 6px auto;
 }
 
 .photosSlider {
   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
   height: 210px;
-  margin: 6px 0;
+  width: $widthMain;
+  margin: 6px auto;
   background: #fff;
 }
 
 .v-fooretMenu {
   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
   height: 50px;
-  margin: 6px 0;
+  width: $widthMain;
+  margin: 6px auto;
   background: #fff;
   line-height: 50px;
   font-size: 12px;
@@ -71,7 +75,8 @@
 .v-partners {
   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
   height: 90px;
-  margin: 6px 0;
+  width: $widthMain;
+  margin: 6px auto;
   background: #fff;
   padding: 6px 17px;
   text-align: center;

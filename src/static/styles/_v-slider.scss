@@ -1,8 +1,12 @@
+@import "variables";
+
 .v-slider {
   height: 366px;
   position: relative;
   padding: 6px;
   user-select: none;
+  width: $widthMain;
+  margin: 6px auto;
 
   .wrapper {
     height: 100%;

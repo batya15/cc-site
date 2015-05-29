@@ -1,8 +1,11 @@
 @import "sprite";
+@import "variables";
 
 .v-faq {
   text-align: center;
   padding: 20px;
+  width: $widthMain;
+  margin: 6px auto;
 
   h1 {
     font-size: 24px;

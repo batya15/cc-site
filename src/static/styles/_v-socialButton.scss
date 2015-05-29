@@ -1,9 +1,12 @@
 @import "sprite";
+@import "variables";
 
 .v-socialButton {
   height: 50px;
   line-height: 50px;
   padding: 0 18px;
+  width: $widthMain;
+  margin: 6px auto;
 
   .item {
     background-image: url("/img/sprite.png");

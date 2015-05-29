@@ -8,28 +8,26 @@ html
             link(rel='stylesheet', href='/vendor/css/normalize.css')
             link(rel='stylesheet', href='/styles/bootstrap.css')
             link(rel='stylesheet', href='/styles/main.css')
-        else
-            link(rel='stylesheet', href='/styles.css')
     body
-        .v-main
-            !=header
-            != subMenu
-            != slider
-            != triggers
-            != menuType
-            .popProduction Популярные товары
-            != measurement
-            != reviewsRotator
-            != faq
-            .photosSlider Наши работы
-            != footerMenu
-            != partners
-            != socialButton
-            .footerMargin
-            != footer
+        !=header
+        != subMenu
+        != slider
+        != triggers
+        != menuType
+        .popProduction Популярные товары
+        != measurement
+        != reviewsRotator
+        != faq
+        .photosSlider Наши работы
+        != footerMenu
+        != partners
+        != socialButton
+        .footerMargin
+        != footer
     if (_evn == 'dev')
         script(data-main="main", src="/vendor/js/require.js")
         script(src="/require-config.js")
     else
         script(data-main="main", src="/main.js", async)
+        link(rel='stylesheet', href='/styles.css')
     != scripts

@@ -1,8 +1,11 @@
 @import "sprite";
+@import "variables";
 
 .v-reviewsRotator {
   height: 368px;
   background: #fff;
+  width: $widthMain;
+  margin: 6px auto;
 
   h2 {
     font-size: 24px;

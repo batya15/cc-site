@@ -1,11 +1,14 @@
 @import "sprite";
+@import "variables";
+
 
 .v-subMenu {
   height: 57px;
   text-align: left;
   display: table;
-  width: 100%;
   user-select: none;
+  width: $widthMain;
+  margin: 6px auto;
 
   a.item {
     color: black;

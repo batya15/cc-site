@@ -1,7 +1,11 @@
+@import "variables";
+
 .v-measurement {
   height: 266px;
   background: url("/img/demoMontaj.png") right bottom no-repeat #fff;
   padding: 15px 20px;
+  width: $widthMain;
+  margin: 6px auto;
 
   h2 {
     margin: 0;
