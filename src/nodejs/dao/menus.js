@@ -2,9 +2,7 @@
 
 var db = require('entity/db');
 
-var DaoMenus = function () {
-    this.name = 'DaoUsers';
-};
+var DaoMenus = function () {};
 
 DaoMenus.prototype = {
     constructor: DaoMenus,

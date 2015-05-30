@@ -2,7 +2,6 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
-var alias = require('./services/alias');
 var logger = require('morgan');
 var pages = require('./pages/pages');
 var services = require('services/services');
@@ -10,12 +9,9 @@ var services = require('services/services');
 services.init(function () {
     var app = express();
 
-// view engine setup
-    app.set('views', path.join(__dirname, 'views'));
-    app.set('view engine', 'jade');
     app.disable('x-powered-by');
     app.use(logger('dev'));
-    app.use(alias());
+    services.use(app);
     app.use(bodyParser.json());
     app.use(bodyParser.urlencoded());
     app.use(cookieParser());

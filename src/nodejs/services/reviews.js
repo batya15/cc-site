@@ -32,9 +32,6 @@ Reviews.prototype = {
                 cb(err, model);
             }
         });
-    },
-    api: function(app) {
-
     }
 };
 

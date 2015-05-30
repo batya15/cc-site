@@ -2,9 +2,7 @@
 
 var db = require('entity/db');
 
-var DaoReviews = function () {
-    this.name = 'DaoReviews';
-};
+var DaoReviews = function () {};
 
 DaoReviews.prototype = {
     constructor: DaoReviews,

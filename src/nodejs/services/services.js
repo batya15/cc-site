@@ -5,6 +5,7 @@ var async = require('util/async'),
 
 var Services = function() {
     this.services = {
+        aliases: require('./aliases'),
         setting: require('./setting'),
         menu: require('./menu'),
         update: require('./updater'),
@@ -21,7 +22,7 @@ Services.prototype = {
                 tasks[name] = (function (services) {
                     return function (cb) {
                         services.init(cb);
-                    }
+                    };
                 })(this.services[name]);
             }
         }
@@ -32,6 +33,13 @@ Services.prototype = {
             log.info('*** ALL SERVICES INITIALIZE ***');
             cb(err, res);
         });
+    },
+    use: function (app) {
+        for (var name in this.services) {
+            if (this.services.hasOwnProperty(name) && typeof this.services[name]['expressUse'] === 'function') {
+                this.services[name].expressUse(app);
+            }
+        }
     }
 };
 

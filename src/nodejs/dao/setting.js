@@ -3,7 +3,6 @@
 var db = require('entity/db');
 
 var DaoSetting = function () {
-    this.name = 'DaoSetting';
     this.schema = {
         name: 'Интернет магази',
         slogan: '',
