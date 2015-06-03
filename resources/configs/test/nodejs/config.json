@@ -7,7 +7,8 @@
     "db_pass": "nLk314l66QiF",
     "db_name": "cc"
   },
-  "admin_server": "10.0.3.96",
+  "admin_server": "http://admin.cc.co.ua/siteUpdater",
   "admin_port": "3030",
-  "evn": "release"
+  "evn": "release",
+  "port": 3000
 }

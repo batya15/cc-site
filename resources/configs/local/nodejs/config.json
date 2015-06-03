@@ -1,13 +1,14 @@
 {
   "name": "local version",
   "db" : {
-    "db_host": "localhost",
+    "db_host": "127.0.0.1",
     "db_port": "3306",
     "db_user": "root",
     "db_pass": "",
     "db_name": "cc"
   },
-  "admin_server": "127.0.0.1",
+  "admin_server": "http://admin.cc.loc/siteUpdater",
   "admin_port": "3030",
-  "evn": "dev"
+  "evn": "dev",
+  "port": 81
 }

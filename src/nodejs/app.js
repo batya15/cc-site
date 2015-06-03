@@ -5,6 +5,7 @@ var bodyParser = require('body-parser');
 var logger = require('morgan');
 var pages = require('./pages/pages');
 var services = require('services/services');
+var config = require('util/config');
 
 services.init(function () {
     var app = express();
@@ -43,6 +44,6 @@ services.init(function () {
         });
     });
 
-    app.listen(3000);
+    app.listen(config.get('port'));
 
 });
