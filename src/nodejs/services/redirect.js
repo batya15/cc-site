@@ -1,35 +1,34 @@
 "use strict";
 
-var dao = require('dao/aliases'),
+var dao = require('dao/redirect'),
     log = require('util/logger')(module),
     updater = require('services/updater'),
-    model = require('models/aliases'),
-    url = require('url');
+    model = require('models/redirect');
 
-var Aliases = function () {
+var Redirected = function () {
     updater.on('all', this._initialize.bind(this));
-    updater.on('aliases', this._initialize.bind(this));
+    updater.on('redirectList', this._initialize.bind(this));
 };
 
-Aliases.prototype = {
-    constructor: Aliases,
+Redirected.prototype = {
+    constructor: Redirected,
     init: function (cb) {
         this._initialize(function () {
-            log.info('aliases initialize');
+            log.info('redirect initialize');
             cb.apply(this, arguments);
         });
     },
     _initialize: function (cb) {
         dao.get(function (err, row) {
-            var aliases = {};
+            var redirectList = {};
             if (err) {
                 log.error(err);
             } else {
                 row.forEach(function (val) {
-                    aliases[val.alias] = url.parse(val.url, true);
+                    redirectList[val.source] = val.destination;
                 });
-                log.info('aliases load');
-                model.set(aliases);
+                log.info('redirect list build');
+                model.set(redirectList);
             }
             if (typeof cb === 'function') {
                 cb(err, model);
@@ -38,14 +37,14 @@ Aliases.prototype = {
     },
     expressUse: function (app) {
         app.use(function (req, res, next) {
-            var alias = model.get(req.url);
-            if (alias) {
-                req.url = alias.pathname;
-                req.query = alias.query;
+            var url = model.get(req.originalUrl);
+            if (url) {
+                res.redirect(301, url);
+            } else {
+                next();
             }
-            next();
         });
     }
 };
 
-module.exports = new Aliases();
+module.exports = new Redirected();

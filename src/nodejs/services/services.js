@@ -5,6 +5,7 @@ var async = require('util/async'),
 
 var Services = function() {
     this.services = {
+        redirect: require('./redirect'),
         aliases: require('./aliases'),
         setting: require('./setting'),
         menu: require('./menu'),
