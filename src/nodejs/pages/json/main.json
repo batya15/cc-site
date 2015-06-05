@@ -39,38 +39,10 @@
           }
         }
       },
-      "measurement": {
-        "view": "list",
-        "template": "measurement",
-        "namespace": "measurement"
-      },
-      "faq" : {
-        "view": "list",
-        "template": "faq",
-        "namespace": "faq"
-      },
-      "slider": {
-        "view": "list",
-        "template": "slider",
-        "namespace": "slider"
-      },
       "subMenu": {
         "view": "list",
         "template": "subMenu",
         "namespace": "submenu"
-      },
-      "triggers": {
-        "view": "list",
-        "template": "triggers",
-        "namespace": "triggers"
-      },
-      "reviewsRotator": {
-        "view": "reviewsRotator"
-      },
-      "menuType": {
-        "view": "list",
-        "template": "menuType",
-        "namespace": "menuType"
       },
       "footerMenu": {
         "view": "list",
@@ -101,6 +73,40 @@
       "scripts": {
         "view": "setting",
         "name": ["googleAnalytics", "yandexMetrika", "scripts"]
+      },
+      "content": {
+        "view": "html",
+        "template": "home",
+        "views": {
+          "slider": {
+            "view": "list",
+            "template": "slider",
+            "namespace": "slider"
+          },
+          "triggers": {
+            "view": "list",
+            "template": "triggers",
+            "namespace": "triggers"
+          },
+          "menuType": {
+            "view": "list",
+            "template": "menuType",
+            "namespace": "menuType"
+          },
+          "measurement": {
+            "view": "list",
+            "template": "measurement",
+            "namespace": "measurement"
+          },
+          "reviewsRotator": {
+            "view": "reviewsRotator"
+          },
+          "faq" : {
+            "view": "list",
+            "template": "faq",
+            "namespace": "faq"
+          }
+        }
       }
     }
   }

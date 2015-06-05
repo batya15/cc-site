@@ -3,6 +3,6 @@
 var View = require('entity/view'),
     Html = require('entity/viewHtml');
 
-var templates = ['banner', 'footer', 'main', 'header'];
+var templates = ['banner', 'footer', 'main', 'header', 'home', 'catalog'];
 
 module.exports = new Html(View, templates);
