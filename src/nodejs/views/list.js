@@ -5,7 +5,7 @@ var View = require('entity/view'),
     model = require('models/menus');
 
 var templates = ['footer', 'footerMenu', 'faq', 'mainMenu', 'menuType',
-                 'partners', 'socialButton', 'subMenu', 'triggers', 'slider'];
+                 'partners', 'socialButton', 'subMenu', 'triggers', 'slider', 'measurement'];
 
 var List = function (name) {
     this.jadeFile = name;
