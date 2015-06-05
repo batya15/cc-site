@@ -1,0 +1,25 @@
+.v-partners {
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+  height: 90px;
+  width: $widthMain;
+  margin: 6px auto;
+  background: #fff;
+  padding: 6px 17px;
+  text-align: center;
+
+  h5 {
+    text-align: left;
+    font-weight: bold;
+    margin: 0;
+  }
+
+  .item {
+    margin-right: 31px;
+    vertical-align: middle;
+  }
+
+  & :last-child {
+    margin-right: 0;
+  }
+
+}
