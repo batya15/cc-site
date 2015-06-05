@@ -20,7 +20,7 @@ ReviewRotator.prototype = new View();
 ReviewRotator.prototype.comparator = function (data, cb) {
     var list = [],
         SEX = ['', 'man', 'woman'],
-        collection = model.getModels(0, 3);
+        collection = model.getRandomModels(9);
     collection.forEach(function(item) {
         list.push({
             name: item.name,

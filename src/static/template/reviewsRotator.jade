@@ -1,10 +1,10 @@
-.v-reviewsRotator.commonBox(data-review-rotator)
+.v-reviewsRotator.commonBox(data-review-rotator, data-id = 1)
     h2 Отзывы клиентов
     .reviewList
-        .prevBtn
-        .nextBtn
-        .cnt
-            .inner
+        .prevBtn(data-prev)
+        .nextBtn(data-next)
+        .cnt(data-cnt)
+            .inner(data-tape)
                 each item in list
                     .review
                         .text= item.text
