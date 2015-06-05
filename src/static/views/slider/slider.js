@@ -62,7 +62,6 @@ define(['backbone', './banner'], function(Backbone, Banner) {
         mouseOver: function(e) {
             var id = $(e.currentTarget).data('ns');
             this.timerTrigger = setTimeout(function() {
-                console.log(id);
                 this.collection.setActive(id);
             }.bind(this), 500);
         },
