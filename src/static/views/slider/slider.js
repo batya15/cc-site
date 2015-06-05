@@ -31,6 +31,7 @@ define(['backbone', './banner'], function(Backbone, Banner) {
     return Backbone.View.extend({
         events: {
             'mouseover [data-ns]': 'mouseOver',
+            'mouseout [data-ns]': 'mouseOut',
             'mouseenter': 'stopTimer',
             'mouseleave': 'startTimer'
         },
@@ -55,8 +56,15 @@ define(['backbone', './banner'], function(Backbone, Banner) {
             var v = new Banner({model: m});
             this.$('.wrapper').append(v.$el);
         },
+        mouseOut: function() {
+            clearTimeout(this.timerTrigger);
+        },
         mouseOver: function(e) {
-            this.collection.setActive($(e.currentTarget).data('ns'));
+            var id = $(e.currentTarget).data('ns');
+            this.timerTrigger = setTimeout(function() {
+                console.log(id);
+                this.collection.setActive(id);
+            }.bind(this), 500);
         },
         active: function(m) {
             if (m.get('active')) {
