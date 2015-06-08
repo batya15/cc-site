@@ -7,6 +7,10 @@
     "db_pass": "nLk314l66QiF",
     "db_name": "cc"
   },
+  "mailer" : {
+    "login": "devel.cc@gmail.com",
+    "password" : "vg6llxeK41IiDVH2"
+  },
   "admin_server": "http://admin.cc.co.ua/siteUpdater",
   "admin_port": "3030",
   "evn": "release",

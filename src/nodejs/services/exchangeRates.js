@@ -3,7 +3,8 @@
 var dao = require('dao/exchangeRates'),
     log = require('util/logger')(module),
     updater = require('services/updater'),
-    model = require('models/exchangeRates');
+    model = require('models/exchangeRates'),
+    mailer = require('services/mailer');
 
 var ExchangeRates = function () {
     updater.on('all', this._initialize.bind(this));
@@ -42,6 +43,7 @@ ExchangeRates.prototype = {
         }
         if (model.get('USD') != res.USD || model.get('EUR') != res.EUR) {
             log.info('change exchange rates');
+            mailer.sendMail('exchangeRates', res);
         }
         model.set(res);
         if (typeof cb === 'function') {
