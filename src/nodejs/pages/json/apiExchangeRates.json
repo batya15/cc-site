@@ -1,0 +1,7 @@
+{
+  "route": "/api/exchangeRates.json",
+  "content type": "application/json; charset=utf-8",
+  "structure": {
+    "view": "exchangeRates"
+  }
+}

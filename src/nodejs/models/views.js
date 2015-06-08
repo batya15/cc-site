@@ -5,5 +5,6 @@ module.exports = {
     list: require('views/list'),
     meta: require('views/meta'),
     setting: require('views/setting'),
-    reviewsRotator: require('views/reviewsRotator')
+    reviewsRotator: require('views/reviewsRotator'),
+    exchangeRates: require('views/exchangeRates')
 };

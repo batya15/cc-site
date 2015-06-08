@@ -10,7 +10,8 @@ var Services = function() {
         setting: require('./setting'),
         menu: require('./menu'),
         update: require('./updater'),
-        reviews: require('./reviews')
+        reviews: require('./reviews'),
+        exchangeRates: require('./exchangeRates')
     };
 };
 
