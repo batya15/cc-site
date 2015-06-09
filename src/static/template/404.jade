@@ -1,0 +1,10 @@
+doctype html
+html
+    head
+        title Страница не найдена
+    body
+        .content
+            h1= _client.message || 'Страница не найдена'
+            if (_client.err)
+                h2= _client.status
+                pre #{_client.err.stack}
