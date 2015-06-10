@@ -18,8 +18,7 @@ View.prototype = {
             },
             self = this,
             loadJadeFile = function () {
-                var templateJade = fs.readFileSync('template/' + self.jadeFile + '.jade', 'utf-8');
-                return jade.compile(templateJade, {});
+                return jade.compileFile('template/' + self.jadeFile + '.jade');
             };
 
         if (this.jadeFile) {

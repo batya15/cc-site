@@ -3,7 +3,25 @@
   "status": 404,
   "structure": {
     "view": "html",
-    "template": "404"
+    "template": "404",
+    "views": {
+      "scripts": {
+        "view": "setting",
+        "name": ["googleAnalytics", "yandexMetrika", "scripts"]
+      },
+      "slogan": {
+        "view": "setting",
+        "name": "slogan"
+      },
+      "nameCompany": {
+        "view": "setting",
+        "name": "name"
+      },
+      "phone": {
+        "view": "setting",
+        "name": "phone"
+      }
+    }
   }
 }
 

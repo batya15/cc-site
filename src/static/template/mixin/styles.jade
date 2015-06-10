@@ -1,0 +1,7 @@
+mixin styles
+    if (_evn == 'dev')
+        link(rel='stylesheet', href='/vendor/css/normalize.css')
+        link(rel='stylesheet', href='/styles/bootstrap.css')
+        link(rel='stylesheet', href='/styles/main.css')
+    else
+        link(rel='stylesheet', href='/styles.css')

@@ -6,6 +6,13 @@
   font-weight: bold;
 }
 
+.logo {
+  display: inline-block;
+  min-height: 61px;
+  min-width: 124px;
+  background: url('/img/logo_main.png') center no-repeat transparent;
+}
+
 .commonBox {
   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
   background: #fff;

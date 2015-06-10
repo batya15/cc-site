@@ -1,0 +1,36 @@
+.v-404 {
+  width: 60%;
+  margin: 50px auto;
+
+  .header {
+    padding: 10px;
+  }
+
+  .name {
+    display: inline-block;
+    vertical-align: top;
+    margin-left: 10px;
+  }
+
+  .text {
+    text-align: center;
+    padding: 7px;
+    font-size: 16px;
+  }
+
+  .img {
+    height: 300px;
+    margin-top: 10px;
+    background: url("/img/404.jpg") center no-repeat;
+    background-size: cover;
+
+    h1 {
+      color: white;
+      float: right;
+      margin: 20px;
+      padding: 0;
+      font-size: 48px;
+    }
+  }
+
+}

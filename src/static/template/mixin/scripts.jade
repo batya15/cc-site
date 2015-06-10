@@ -1,0 +1,6 @@
+mixin scripts
+    if (_evn == 'dev')
+        script(data-main="main", src="/vendor/js/require.js")
+        script(src="/require-config.js")
+    else
+        script(data-main="main", src="/main.js", async)

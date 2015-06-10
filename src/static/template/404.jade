@@ -1,10 +1,27 @@
+include ./mixin/styles
+include ./mixin/scripts
+
 doctype html
 html
     head
-        title Страница не найдена
+        title
+        +styles
     body
-        .content
+        .v-404.commonBox
+            .header
+                .logo
+                .name
+                    h3= nameCompany
+                    .slogan= slogan
+                    .phone= phone
+            .text Страница была удалена или никогда её никогда не существовало.
+            .text= 'Перейдите на '
+                a(href= '/') главную страницу.
+            .img
+                h1 404
+        if (_client.err)
             h1= _client.message || 'Страница не найдена'
-            if (_client.err)
-                h2= _client.status
-                pre #{_client.err.stack}
+            h2= _client.status
+            pre #{_client.err.stack}
+    +scripts
+    != scripts
