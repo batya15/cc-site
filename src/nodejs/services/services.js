@@ -11,14 +11,16 @@ var Services = function() {
         menu: require('./menu'),
         update: require('./updater'),
         reviews: require('./reviews'),
-        exchangeRates: require('./exchangeRates')
+        exchangeRates: require('./exchangeRates'),
+        staticFiles: require('./staticFiles')
     };
 };
 
 Services.prototype = {
     constructor: Services,
     init: function (cb) {
-        var tasks = {};
+        var tasks = {},
+            time = Date.now();
         for (var name in this.services) {
             if (this.services.hasOwnProperty(name)) {
                 tasks[name] = (function (services) {
@@ -32,7 +34,7 @@ Services.prototype = {
             if (err) {
                 log.error(err);
             }
-            log.info('*** ALL SERVICES INITIALIZE ***');
+            log.info('*** ALL SERVICES INITIALIZE *** [time: ' + (Date.now() - time) + 'ms]');
             cb(err, res);
         });
     },
