@@ -14,5 +14,7 @@
   "admin_server": "http://admin.cc.loc/siteUpdater",
   "admin_port": "3030",
   "evn": "dev",
-  "port": 81
+  "port": 81,
+  "staticPath": "d:\\dev\\cc-site\\staticFiles\\",
+  "staticUrl": "/staticFiles/"
 }

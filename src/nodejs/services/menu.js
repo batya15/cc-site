@@ -3,6 +3,7 @@
 var dao = require('dao/menus'),
     log = require('util/logger')(module),
     updater = require('services/updater'),
+    staticUrl = require('util/config').get('staticUrl'),
     model = require('models/menus');
 
 var Menu = function () {
@@ -30,6 +31,9 @@ Menu.prototype = {
                             menus[item.submenu] = []
                         }
                         item.submenu = menus[item.submenu];
+                    }
+                    if (item.filename) {
+                        item.image = staticUrl + item.filename;
                     }
                     menus[item.menu].push(item);
                 });

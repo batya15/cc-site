@@ -14,5 +14,7 @@
   "admin_server": "http://admin.cc.co.ua/siteUpdater",
   "admin_port": "3030",
   "evn": "release",
-  "port": 3000
+  "port": 3000,
+  "staticPath": "/usr/static/static/",
+  "staticUrl": "/staticFiles/"
 }

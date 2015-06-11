@@ -21,7 +21,7 @@ Updater.prototype.init = function (cb) {
             self.emit('all');
         });
         socket.on('update', function(data){
-            self.emit(data.service);
+            self.emit(data.service, data.data);
         });
         socket.on('disconnect', function(){
             log.info('disconnect admin app');
