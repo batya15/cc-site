@@ -16,5 +16,5 @@
   "evn": "release",
   "port": 3000,
   "staticPath": "/usr/static/static/",
-  "staticUrl": "/staticFiles/"
+  "staticUrl": "/static/"
 }
