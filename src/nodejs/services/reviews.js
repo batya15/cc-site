@@ -4,6 +4,7 @@ var dao = require('dao/reviews'),
     log = require('util/logger')(module),
     updater = require('services/updater'),
     model = require('models/reviews'),
+    staticUrl = require('util/config').get('staticUrl'),
     fs = require('fs');
 
 
@@ -23,6 +24,11 @@ Reviews.prototype = {
     _initialize: function (cb) {
         dao.getApproved(function (err, row) {
             if (!err && row) {
+                row.forEach(function (item) {
+                    if (item.filename) {
+                        item.avatar = staticUrl + item.filename;
+                    }
+                });
                 model.set(row);
                 log.info('load reviews');
             } else {
